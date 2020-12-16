@@ -4,32 +4,20 @@
 def bubblesort(array):
 
     if array is None:
-        print("Du kleiner Schlingel, versuch es nochmal.")
+        print("Try again.")
 
-    j = len(array)
-
-    while j > 1:
+    for j in range(len(array), 0, -1):
 
         i = 0
 
-        # Das Array wird von links nach rechts durchlaufen
-        while i < len(array) - 1:
+        # Walk through the array from left to right
+        for i in range(0, len(array)-1, 1):
 
-            valueNow = array[i]
-            valueRight = array[i + 1]
-
-            if valueNow > valueRight:
-                valueswap(valueNow, valueRight, array, i)
-
-            i += 1
-
-        j -= 1
+            # Compare the current element with the next right one
+            if array[i] > array[i+1]:
+                valueswap(array, i)
 
 
-def valueswap(valueNow, valueRight, array, position):
-    array[position + 1] = valueNow
-    array[position] = valueRight
-
-    # Bei jedem Schritt vergleiche das aktuelle Element mit seinem Nachbarn
-
-    # Ist das aktuelle Element kleiner als das rechte, werden die Elemente vertauscht
+def valueswap(array, i):
+    #packing and unpacking
+    array[i], array[i+1] = array[i+1], array[i]
