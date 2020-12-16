@@ -8,16 +8,10 @@ def bubblesort(array):
 
     for j in range(len(array), 0, -1):
 
-        i = 0
-
         # Walk through the array from left to right
-        for i in range(0, len(array)-1, 1):
+        for i in range(len(array)-1):
 
             # Compare the current element with the next right one
             if array[i] > array[i+1]:
-                valueswap(array, i)
-
-
-def valueswap(array, i):
-    #packing and unpacking
-    array[i], array[i+1] = array[i+1], array[i]
+                #packing and unpacking
+                array[i], array[i+1] = array[i+1], array[i]
