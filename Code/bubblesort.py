@@ -1,7 +1,7 @@
 # This class is responsible for implementing and executing the bubblesort algorithm
 # on a given array of numbers (integers)
 
-def bubblesort(array):
+def bubble_sort(array):
 
     if array is None:
         print("Try again.")

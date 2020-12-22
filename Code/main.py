@@ -1,13 +1,15 @@
-from Code.bubblesort import bubblesort
+from Code.bubblesort import bubble_sort
+from Code.visualizer import Visualizer
 
 
 def main():
-    array = [1, 4, 7, 23, 5, 7, 1, 3]
-    bubblesort(array)
+    window = Visualizer("Bubble sort Visualizer", "1200x600")
 
-    print(array)
+    array = [1, 4, 7, 23, 5, 7, 1, 3]
+    bubble_sort(array)
+
 
 if __name__ == "__main__":
     main()
 
-print("Hey, its me!")
+
