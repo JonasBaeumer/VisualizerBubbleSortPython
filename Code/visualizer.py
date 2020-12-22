@@ -17,7 +17,7 @@ def window_runner(root):
 
 
 def get_length_input(length_input):
-    # Todo: Implement validity check for entry value
+    # Todo: Implement validity check for entry value (int)
     if length_input is not None:
         user_input = int(length_input.get())
         print(user_input)
